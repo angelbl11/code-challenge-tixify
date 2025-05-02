@@ -22,3 +22,11 @@ build-android:
 build-ios:
 	@echo "Building the project for iOS"
 	$(FLUTTER) build ipa --dart-define-from-file=$(ENV_FILE)
+
+
+# Run the tests
+run-test:
+	@echo "Running the tests"
+	$(FLUTTER) test
+
+
