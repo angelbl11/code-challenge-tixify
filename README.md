@@ -2,6 +2,16 @@
 
 A Flutter application that demonstrates modern mobile development practices and clean architecture principles.
 
+## Demo
+
+### iOS Demo
+
+![Demo iOS](assets/demo/demo_ios.gif)
+
+### Android Demo
+
+![Demo Android](assets/demo/demo_android.gif)
+
 ## Arquitectura Implementada
 
 El proyecto sigue una arquitectura limpia (Clean Architecture) con los siguientes componentes principales:
