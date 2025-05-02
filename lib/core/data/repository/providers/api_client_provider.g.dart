@@ -6,7 +6,7 @@ part of 'api_client_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$apiClientHash() => r'1916d0ee7cbb82aafc0e4ba2de0ecc39ecda5b8e';
+String _$apiClientHash() => r'4f850a3693c681aef2fe47f5c52302a6a7a65da9';
 
 /// Provider for [SkApi]
 ///

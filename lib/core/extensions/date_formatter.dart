@@ -32,4 +32,12 @@ extension DateFormatter on String {
       return this;
     }
   }
+
+  static String formatEventDateTime(DateTime? date, String? time) {
+    if (date == null) return 'Sin fecha confirmada';
+
+    final dateString = date.toString().split(' ')[0];
+    final fullString = time != null ? '$dateString $time' : dateString;
+    return fullString.formatEventDate();
+  }
 }

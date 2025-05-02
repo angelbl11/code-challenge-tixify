@@ -1,11 +1,12 @@
 import 'package:dio/dio.dart';
-import 'package:event_code_challenge/core/models/event_info_model.dart';
+import 'package:event_code_challenge/core/models/event-info/event_info_model.dart';
 import 'package:retrofit/retrofit.dart';
 
 part 'api_client.g.dart';
 
-@RestApi(baseUrl: "https://app.ticketmaster.com")
+@RestApi()
 abstract class ApiClient {
+  static const String baseUrl = "https://app.ticketmaster.com";
   static const String apiKey = 'EXAX691PwyOnhpHXAmeunDw8j0qiezH1';
   static const String locale = 'es-mx';
   static const String city = 'Guadalajara';
