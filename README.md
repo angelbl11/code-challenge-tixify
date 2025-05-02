@@ -53,20 +53,26 @@ cd event_code_challenge
 flutter pub get
 ```
 
-3. Ejecuta la aplicación:
+3. Genera los archivos de código:
 
 ```bash
-flutter run
+make gen-code
+```
+
+4. Ejecuta la aplicación:
+
+```bash
+make run
 ```
 
 ## Generación de Archivos Ejecutables
 
 ### Para Android (APK)
 
-1. Genera el APK de release:
+Genera el APK de release:
 
 ```bash
-flutter build apk --release
+make build-android
 ```
 
 El archivo APK se generará en:
@@ -74,19 +80,32 @@ El archivo APK se generará en:
 
 ### Para iOS (IPA)
 
-1. Abre el proyecto en Xcode:
+Genera el archivo IPA:
 
 ```bash
-cd ios
-open Runner.xcworkspace
+make build-ios
 ```
 
-2. En Xcode:
-   - Selecciona el dispositivo destino
-   - Product > Archive
-   - Sigue el proceso de exportación
+### Ejecutar Tests
 
-El archivo IPA se generará en la ubicación especificada durante el proceso de exportación.
+Para ejecutar los tests del proyecto:
+
+```bash
+make run-test
+```
+
+El proyecto utiliza:
+
+- **Mockito**: Para la creación de mocks en las pruebas unitarias
+- **Coverage**: Para generar reportes de cobertura de código
+
+Para generar el reporte de cobertura:
+
+```bash
+make run-test
+```
+
+El reporte se generará en el directorio `coverage/`.
 
 ## Dependencias Principales
 
