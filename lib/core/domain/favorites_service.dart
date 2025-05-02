@@ -1,5 +1,4 @@
 import 'package:event_code_challenge/core/models/event-info/event_info_model.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 

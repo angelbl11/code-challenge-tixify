@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:event_code_challenge/core/config/environment_keys.dart';
 import 'package:event_code_challenge/core/models/event-info/event_info_model.dart';
 import 'package:retrofit/retrofit.dart';
 
@@ -6,8 +7,8 @@ part 'api_client.g.dart';
 
 @RestApi()
 abstract class ApiClient {
-  static const String baseUrl = "https://app.ticketmaster.com";
-  static const String apiKey = 'EXAX691PwyOnhpHXAmeunDw8j0qiezH1';
+  static String get baseUrl => EnvironmentKeys.baseUrl;
+  static String get apiKey => EnvironmentKeys.apiKey;
   static const String locale = 'es-mx';
   static const String city = 'Guadalajara';
   static const int pageSize = 20;

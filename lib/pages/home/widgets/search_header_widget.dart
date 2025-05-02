@@ -28,7 +28,7 @@ class SearchHeaderWidget extends StatelessWidget {
           children: [
             Expanded(
               child: CustomSearchBar(
-                hintText: 'Buscar eventos',
+                hintText: 'Buscar por nombre o descripción',
                 leadingIcon: Icons.search,
                 onChanged: onSearchChanged,
                 onSubmitted: onSearchSubmitted,

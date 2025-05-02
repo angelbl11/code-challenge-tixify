@@ -84,28 +84,51 @@ class EventItemWidget extends ConsumerWidget {
                           ),
                     ),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      TextButton.icon(
-                        onPressed: () {
-                          ref
-                              .read(favoritesServiceProvider.notifier)
-                              .toggleFavorite(event);
-                        },
-                        icon: Icon(
-                          isFavorite ? Icons.favorite : Icons.favorite_border,
+                  const SizedBox(height: 8),
+                  if (event.embedded?.venues?.isNotEmpty == true)
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.location_on,
+                          size: 16,
                           color: Theme.of(context).colorScheme.primary,
                         ),
-                        label: Text(
-                          isFavorite ? 'Guardado' : 'Guardar',
-                          style: TextStyle(
-                            color: Theme.of(context).colorScheme.primary,
-                            fontWeight: FontWeight.w600,
+                        const SizedBox(width: 4),
+                        Expanded(
+                          child: Text(
+                            event.embedded!.venues!.first.name ??
+                                'Sin ubicación',
+                            style: Theme.of(context).textTheme.bodyMedium,
                           ),
                         ),
+                      ],
+                    ),
+                  const SizedBox(height: 8),
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: TextButton.icon(
+                      style: TextButton.styleFrom(
+                        padding: EdgeInsets.zero,
+                        minimumSize: Size.zero,
+                        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                       ),
-                    ],
+                      onPressed: () {
+                        ref
+                            .read(favoritesServiceProvider.notifier)
+                            .toggleFavorite(event);
+                      },
+                      icon: Icon(
+                        isFavorite ? Icons.favorite : Icons.favorite_border,
+                        color: Theme.of(context).colorScheme.primary,
+                      ),
+                      label: Text(
+                        isFavorite ? 'Guardado' : 'Guardar',
+                        style: TextStyle(
+                          color: Theme.of(context).colorScheme.primary,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
                   ),
                 ],
               ),
