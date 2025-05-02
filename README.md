@@ -43,7 +43,7 @@ lib/
 1. Clona el repositorio:
 
 ```bash
-git clone [URL_DEL_REPOSITORIO]
+git clone https://github.com/angelbl11/code-challenge-tixify.git
 cd event_code_challenge
 ```
 
